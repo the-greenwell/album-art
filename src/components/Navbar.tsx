@@ -10,6 +10,7 @@ export const Navbar: React.FC = () => {
 
     useEffect(()=>{
         setPath(location.pathname.split('/')[1]);
+        console.log(path)
     },[location])
 
     const resetSite =()=>{
@@ -20,7 +21,7 @@ export const Navbar: React.FC = () => {
         <nav id="navbar" className={`navbar ${dark ? 'navbar-dark bg-black' : 'navbar-light bg-light'}`}>
             <div className='left'>
                 <span className="navbar-brand mb-0 h1" onClick={resetSite} style={{cursor: 'pointer'}}>Album Art</span>
-                <Link to={path == 'artist' ? '/' : '/artist'}>{path !== '' ? 'Search for an Artist' : artist && 'View Last Artist'}</Link>
+                <Link to={path == 'artist' ? '/album-art' : '/album-art/artist'}>{path !== '' ? 'Search for an Artist' : artist && 'View Last Artist'}</Link>
             </div>
             <div className='d-flex align-items-center gap-2 right'>
                 <p className={`${dark ? 'text-light' : 'text-dark'} spotify-link`}>Powered by the <a className="footer-link" href="https://www.spotify.com">Spotify <FaSpotify /></a> API</p>

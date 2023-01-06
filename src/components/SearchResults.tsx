@@ -9,7 +9,7 @@ export const SearchResults = () => {
 
     const artistHandler = (newArtist:Artist) => {
         if(changeArtist) changeArtist(newArtist);
-        navigate('/artist')
+        navigate('/album-art/artist')
     }
 
     return (

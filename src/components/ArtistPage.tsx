@@ -27,7 +27,7 @@ export const ArtistPage: React.FC = () => {
                 })
             })
         } else {
-            navigate('/')
+            navigate('/album-art')
         }
     }, [])
 

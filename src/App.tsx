@@ -15,8 +15,8 @@ const App: React.FC = () => {
     <div className={`App ${dark ? 'text-light bg-dark' : 'text-dark bg-white'}`}>
       <Navbar />
       <Routes>
-        <Route path="/" element={<SearchPage />} />
-        <Route path="/artist" element={<ArtistPage />} />
+        <Route path="/album-art/" element={<SearchPage />} />
+        <Route path="/album-art/artist" element={<ArtistPage />} />
       </Routes>
     </div>
   )
